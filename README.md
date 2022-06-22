@@ -3,4 +3,4 @@
 
 ## A project made using Tailwind Framework.
 
-[DesignLink](https://dribbble.com/shots/18444011-Project-Management-Dashboard-Design)
+[DesignLink](https://dribbble.com/shots/18444011-Project-Management-Dashboard-Design) , [Tailwind Docs](https://tailwindcss.com/docs/utility-first) ,[Icons](https://www.svgrepo.com/)
