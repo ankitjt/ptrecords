@@ -1,0 +1,85 @@
+<!doctype html>
+<html class="h-full w-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Poppins:wght@400;500&display=swap');
+    * {
+    font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="h-full w-full border-box">
+ <div class="wrapper grid grid-cols-6 h-full">
+  <div class="col-span-1 bg-amber-50 h-full py-8 px-6 left-section">
+    <h1 class="font-bold capitalize text-sm tracking-wide flex items-center">
+      <img src="./assets/projectlogo.svg" alt="projectlogo" class="h-8 w-8 text-green-500">
+       <span class="text-green-500 text-sm ml-4">For-you</span>
+      </h1>
+    <nav class="site-links-wrapper mt-10 text-xs ">
+      <h4 class="text-green-500 uppercase font-semibold tracking-wider">Menu</h4>
+      <div class="site-links flex flex-col mt-5">
+       
+          <a href="#" class="my-3 hover:text-green-500  font-medium flex justify-start items-center ">
+            <img src="./assets/homeIcon.svg" alt="home" class="w-5 h-5 hover:text-green-500"/>
+            <span class="pl-5">Home</span>
+          </a>
+  
+          <a href="#" class="my-3 hover:text-green-500  font-medium flex justify-start items-center ">
+            <img src="./assets/tasks.svg" alt="tasks" class="w-5 h-5 "/>
+            <span class="pl-5">Daily tasks</span>
+          </a>
+
+          <a href="#" class="my-3 hover:text-green-500  font-medium flex justify-start items-center ">
+            <img src="./assets/team.svg" alt="team" class="w-5 h-5">
+            <span class="pl-5">Team Members</span>
+          </a>
+
+          <a href="#" class="my-3 hover:text-green-500  font-medium flex justify-start items-center ">
+            <img src="./assets/calculator.svg" alt="calculator" class="w-5 h-5 "/>
+            <span class="pl-5">Monthly earnings</span>
+          </a>
+
+          <a href="#" class="my-3 hover:text-green-500  font-medium flex justify-start items-center ">
+            <img src="./assets/salary.svg" alt="salary" class="w-5 h-5 "/>
+            <span class="pl-5">Salary</span>
+          </a>
+
+          <a href="#" class="my-3 hover:text-green-500  font-medium flex justify-start items-center ">
+            <img src="./assets/settings.svg" alt="settings" class="w-5 h-5"/>
+            <span class="pl-5">Settings</span>
+          </a>
+
+        
+      </div>
+    </nav>
+  </div>
+  <div class="col-span-5  py-8 px-10 right-section">
+    <nav class="nav-2 flex justify-between items-center border-b-2 border-red-300 pb-4">
+      <div class="nav2-left">
+        <a href="#" class="mr-5 text-xs font-medium hover: text-red-500 text-stone-600">projects</a>
+        <a href="#" class="mr-5 text-xs font-medium hover: text-red-500 text-stone-600">my tasks</a>
+        <a href="#" class="mr-5 text-xs font-medium hover: text-red-500 text-stone-600">inbox</a>
+        <a href="#" class="mr-5 text-xs font-medium hover: text-red-500 text-stone-600">views</a>
+      </div>
+      <div class="nav2-right flex flex-center items-center">
+        <a href="#" class="ml-5">
+          <img src="./assets/message.svg" alt="message-notification" class="w-4 h-4">
+        </a>
+        <a href="#" class="ml-5">
+          <img src="./assets/notifications.svg" alt="notification" class="w-4 h-4">
+        </a>
+        <a href="#" class="ml-5">
+          <img src="./assets/profile.svg" alt="profile" class="w-8 h-8">
+        </a>
+      </div>
+      
+    </nav>
+  </div>
+ </div>
+  
+</body>
+</html>
