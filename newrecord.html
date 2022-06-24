@@ -1,0 +1,137 @@
+<!doctype html>
+<html class="h-full w-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PT-Record</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito+Sans:wght@400;600;700&display=swap');
+    * {
+      /* font-family: 'Nunito Sans', sans-serif; */
+      font-family: 'Montserrat', sans-serif;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body class="border-box">
+  <div class="h-full w-full flex flex-col md:flex-row lg:flex-row">
+
+    <!-- Left section -->
+    <div class="left-section px-6 py-12 w-full h-auto md:h-full lg:h-full md:w-3/12 lg:w-3/12">
+      <h1 class="font-bold text-blue-600 text-base text-center subpixel-antialiased	uppercase">Records</h1>
+      
+      <!-- Navbar -->
+      <nav class="navbar flex flex-col justify-center text-[11px] tracking-wider font-semibold text-zinc-600 uppercase ">
+        <a href="index.html" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300 ">
+            <img src="./assets/homeIcon.svg" alt="homeIcon" class="w-5 h-5">
+            <span class="ml-4 ">Home</span>
+        </a>
+        <a href="newrecord.html" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300  ">
+          <img src="./assets/createnew.svg" alt="newRecord" class="w-5 h-5">
+          <span class="ml-4 ">New record</span>
+        </a>
+        <a href="appointments.html" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300">
+          <img src="./assets/appointments.svg" alt="appointments" class="w-5 h-5">
+          <span class="ml-4 ">Appointments</span>
+        </a>
+        <a href="costing.html" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300">
+          <img src="./assets/calculator.svg" alt="calculator" class="w-5 h-5">
+          <span class="ml-4 ">Costing</span>
+        </a>
+        <a href="reports.html" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300">
+          <img src="./assets/reports.svg" alt="reports" class="w-5 h-5">
+          <span class="ml-4 ">Reports</span>
+        </a>
+        <a href="#" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300">
+          <img src="./assets/darkMode.svg" alt="darkMode" class="w-5 h-5">
+          <span class="ml-4 ">darkMode</span>
+        </a>
+        <a href="settings.html" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300">
+          <img src="./assets/settings.svg" alt="settings" class="w-5 h-5">
+          <span class="ml-4 ">Settings</span>
+        </a>
+        <a href="#" class="flex items-center mt-5 sm:mt-10">
+          <img src="./assets/logout.svg" alt="logout" class="w-5 h-5">
+          <span class="ml-4">logout</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section h-screen w-full sm:w-full bg-gray-100 px-12 py-12 md:overflow-auto">
+      
+      <h1 class="text-base uppercase tracking-widest font-bold text-blue-600 subpixel-antialiased border-solid border-b-2 pb-2">New Record</h1>
+
+  
+<div>
+    
+  
+  <div class="mt-10">
+    <div class="">
+     
+      <div class="">
+        <form action="#" method="POST">
+          <div class="shadow overflow-hidden sm:rounded-md">
+            <div class="px-4 py-5 bg-white sm:p-6">
+              <div class="grid grid-cols-6 gap-6">
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="first-name" class="block text-sm font-medium text-gray-700">First name</label>
+                  <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md px-3">
+                </div>
+  
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="last-name" class="block text-sm font-medium text-gray-700">Last name</label>
+                  <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                </div>
+  
+                <div class="col-span-6 sm:col-span-4">
+                  <label for="email-address" class="block text-sm font-medium text-gray-700">Email address</label>
+                  <input type="text" name="email-address" id="email-address" autocomplete="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                </div>
+  
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="country" class="block text-sm font-medium text-gray-700">Country</label>
+                  <select id="country" name="country" autocomplete="country-name" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    <option>United States</option>
+                    <option>Canada</option>
+                    <option>Mexico</option>
+                  </select>
+                </div>
+  
+                <div class="col-span-6">
+                  <label for="street-address" class="block text-sm font-medium text-gray-700">Street address</label>
+                  <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                </div>
+  
+                <div class="col-span-6 sm:col-span-6 lg:col-span-2">
+                  <label for="city" class="block text-sm font-medium text-gray-700">City</label>
+                  <input type="text" name="city" id="city" autocomplete="address-level2" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                </div>
+  
+                <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                  <label for="region" class="block text-sm font-medium text-gray-700">State / Province</label>
+                  <input type="text" name="region" id="region" autocomplete="address-level1" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                </div>
+  
+                <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                  <label for="postal-code" class="block text-sm font-medium text-gray-700">ZIP / Postal code</label>
+                  <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                </div>
+              </div>
+            </div>
+            <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+              <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Save</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+
+</body>
+</html>
