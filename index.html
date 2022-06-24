@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PT-Record</title>
-  <link rel="stylesheet" src="style.css"> </link>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
@@ -25,27 +24,31 @@
       
       <!-- Navbar -->
       <nav class="navbar flex flex-col justify-center text-[11px] tracking-wider font-semibold text-zinc-600 uppercase ">
-        <a href="#" class="flex items-center mt-5 sm:mt-10">
+        <a href="index.html" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300  ">
+          <img src="./assets/homeIcon.svg" alt="homeIcon" class="w-5 h-5">
+          <span class="ml-4 ">Home</span>
+        </a>
+        <a href="newrecord.html" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300 ">
           <img src="./assets/createnew.svg" alt="newRecord" class="w-5 h-5">
           <span class="ml-4 ">New record</span>
         </a>
-        <a href="#" class="flex items-center mt-5 sm:mt-10">
+        <a href="appointments.html" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300">
           <img src="./assets/appointments.svg" alt="appointments" class="w-5 h-5">
           <span class="ml-4 ">Appointments</span>
         </a>
-        <a href="#" class="flex items-center mt-5 sm:mt-10">
+        <a href="costing.html" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300">
           <img src="./assets/calculator.svg" alt="calculator" class="w-5 h-5">
           <span class="ml-4 ">Costing</span>
         </a>
-        <a href="#" class="flex items-center mt-5 sm:mt-10">
+        <a href="reports.html" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300">
           <img src="./assets/reports.svg" alt="reports" class="w-5 h-5">
           <span class="ml-4 ">Reports</span>
         </a>
-        <a href="#" class="flex items-center mt-5 sm:mt-10">
+        <a href="#" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300">
           <img src="./assets/darkMode.svg" alt="darkMode" class="w-5 h-5">
           <span class="ml-4 ">darkMode</span>
         </a>
-        <a href="#" class="flex items-center mt-5 sm:mt-10">
+        <a href="settings.html" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300">
           <img src="./assets/settings.svg" alt="settings" class="w-5 h-5">
           <span class="ml-4 ">Settings</span>
         </a>
@@ -59,10 +62,10 @@
     <!-- Right Section -->
     <div class="right-section h-screen w-full sm:w-full bg-gray-100 px-12 py-12 md:overflow-auto">
       
-      <h1 class="text-base uppercase tracking-widest font-bold text-blue-600 subpixel-antialiased">Summary</h1>
+      <h1 class="text-base uppercase tracking-widest font-bold text-blue-600 subpixel-antialiased border-solid border-b-2 pb-2">Summary</h1>
 
       <!-- SUMMARY GRID -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 sm:grid-cols-2 md:grid-cols-2 gap-4 mt-10 overflow-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 sm:grid-cols-2 md:grid-cols-2 gap-4 mt-8 overflow-auto">
         <div class="total-appointments text-gray-100 flex bg-blue-400  rounded-md justify-between items-center">
           <p class="font-semibold p-4 text-xs uppercase tracking-widest">Appointments</p>
           <h1 class="font-bold text-3xl px-6 py-5 bg-blue-600 h-full rounded-r-md">6</h1>
