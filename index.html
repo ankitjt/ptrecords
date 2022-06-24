@@ -1,87 +1,136 @@
-
-
 <!doctype html>
 <html class="h-full w-full">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tailwind Landing Page</title>
+  <title>PT-Record</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Poppins:wght@400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito+Sans:wght@400;600;700&display=swap');
     * {
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Nunito Sans', sans-serif; */
+      font-family: 'Montserrat', sans-serif;
+      box-sizing: border-box;
     }
   </style>
 </head>
-<body class="h-full w-full border-box">
- <div class="wrapper grid grid-cols-6 h-full">
-  <div class="col-span-1 bg-amber-50 h-full py-8 px-6 left-section">
-    <h1 class="font-bold capitalize text-sm tracking-wide flex items-center">
-      <img src="./assets/projectlogo.svg" alt="projectlogo" class="h-8 w-8 text-green-500">
-       <span class="text-green-500 text-sm ml-4">For-you</span>
-      </h1>
-    <nav class="site-links-wrapper mt-10 text-xs ">
-      <h4 class="text-green-500 uppercase font-semibold tracking-wider">Menu</h4>
-      <div class="site-links flex flex-col mt-5">
-       
-          <a href="#" class="my-3 hover:text-green-500  font-medium flex justify-start items-center ">
-            <img src="./assets/homeIcon.svg" alt="home" class="w-5 h-5 hover:text-green-500"/>
-            <span class="pl-5">Home</span>
-          </a>
-  
-          <a href="#" class="my-3 hover:text-green-500  font-medium flex justify-start items-center ">
-            <img src="./assets/tasks.svg" alt="tasks" class="w-5 h-5 "/>
-            <span class="pl-5">Daily tasks</span>
-          </a>
+<body class="border-box">
+  <div class="h-full w-full flex flex-col md:flex-row lg:flex-row">
 
-          <a href="#" class="my-3 hover:text-green-500  font-medium flex justify-start items-center ">
-            <img src="./assets/team.svg" alt="team" class="w-5 h-5">
-            <span class="pl-5">Team Members</span>
-          </a>
-
-          <a href="#" class="my-3 hover:text-green-500  font-medium flex justify-start items-center ">
-            <img src="./assets/calculator.svg" alt="calculator" class="w-5 h-5 "/>
-            <span class="pl-5">Monthly earnings</span>
-          </a>
-
-          <a href="#" class="my-3 hover:text-green-500  font-medium flex justify-start items-center ">
-            <img src="./assets/salary.svg" alt="salary" class="w-5 h-5 "/>
-            <span class="pl-5">Salary</span>
-          </a>
-
-          <a href="#" class="my-3 hover:text-green-500  font-medium flex justify-start items-center ">
-            <img src="./assets/settings.svg" alt="settings" class="w-5 h-5"/>
-            <span class="pl-5">Settings</span>
-          </a>
-
-        
-      </div>
-    </nav>
-  </div>
-  <div class="col-span-5  py-8 px-10 right-section">
-    <nav class="nav-2 flex justify-between items-center border-b-2 border-red-300 pb-4">
-      <div class="nav2-left">
-        <a href="#" class="mr-5 text-xs font-medium hover: text-red-500 text-stone-600">projects</a>
-        <a href="#" class="mr-5 text-xs font-medium hover: text-red-500 text-stone-600">my tasks</a>
-        <a href="#" class="mr-5 text-xs font-medium hover: text-red-500 text-stone-600">inbox</a>
-        <a href="#" class="mr-5 text-xs font-medium hover: text-red-500 text-stone-600">views</a>
-      </div>
-      <div class="nav2-right flex flex-center items-center">
-        <a href="#" class="ml-5">
-          <img src="./assets/message.svg" alt="message-notification" class="w-4 h-4">
-        </a>
-        <a href="#" class="ml-5">
-          <img src="./assets/notifications.svg" alt="notification" class="w-4 h-4">
-        </a>
-        <a href="#" class="ml-5">
-          <img src="./assets/profile.svg" alt="profile" class="w-8 h-8">
-        </a>
-      </div>
+    <!-- Left section -->
+    <div class="left-section px-6 py-12 w-full h-auto md:h-full lg:h-full md:w-3/12 lg:w-3/12">
+      <h1 class="font-bold text-blue-600 text-base text-center subpixel-antialiased	uppercase">Records</h1>
       
-    </nav>
-  </div>
- </div>
+      <!-- Navbar -->
+      <nav class="navbar flex flex-col justify-center text-[11px] tracking-wider font-semibold text-zinc-600 uppercase ">
+        <a href="#" class="flex items-center mt-5 sm:mt-10">
+          <img src="./assets/createnew.svg" alt="newRecord" class="w-5 h-5">
+          <span class="ml-4 ">New record</span>
+        </a>
+        <a href="#" class="flex items-center mt-5 sm:mt-10">
+          <img src="./assets/appointments.svg" alt="appointments" class="w-5 h-5">
+          <span class="ml-4 ">Appointments</span>
+        </a>
+        <a href="#" class="flex items-center mt-5 sm:mt-10">
+          <img src="./assets/calculator.svg" alt="calculator" class="w-5 h-5">
+          <span class="ml-4 ">Costing</span>
+        </a>
+        <a href="#" class="flex items-center mt-5 sm:mt-10">
+          <img src="./assets/reports.svg" alt="reports" class="w-5 h-5">
+          <span class="ml-4 ">Reports</span>
+        </a>
+        <a href="#" class="flex items-center mt-5 sm:mt-10">
+          <img src="./assets/darkMode.svg" alt="darkMode" class="w-5 h-5">
+          <span class="ml-4 ">darkMode</span>
+        </a>
+        <a href="#" class="flex items-center mt-5 sm:mt-10">
+          <img src="./assets/settings.svg" alt="settings" class="w-5 h-5">
+          <span class="ml-4 ">Settings</span>
+        </a>
+        <a href="#" class="flex items-center mt-5 sm:mt-10">
+          <img src="./assets/logout.svg" alt="logout" class="w-5 h-5">
+          <span class="ml-4">logout</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section h-screen w-full sm:w-full bg-gray-100 px-12 py-12 md:overflow-auto">
+      
+      <h1 class="text-base uppercase tracking-widest font-bold text-blue-600 subpixel-antialiased">Summary</h1>
+
+      <!-- SUMMARY GRID -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 sm:grid-cols-2 md:grid-cols-2 gap-4 mt-10 overflow-auto">
+        <div class="total-appointments text-gray-100 flex bg-blue-400  rounded-md justify-between items-center">
+          <p class="font-semibold p-4 text-xs uppercase tracking-widest">Appointments</p>
+          <h1 class="font-bold text-3xl px-6 py-5 bg-blue-600 h-full rounded-r-md">6</h1>
+        </div>
+        <div class="total-appointments text-gray-100 flex bg-blue-400 rounded-md justify-between items-center">
+          <p class="font-semibold p-3 text-xs uppercase tracking-widest">Requests</p>
+          <h1 class="font-bold text-3xl px-6 py-5 bg-blue-600 h-full rounded-r-md">6</h1>
+        </div>
+        <div class="total-appointments text-gray-100 flex bg-blue-400  rounded-md justify-between items-center">
+          <p class="font-semibold p-3 text-xs uppercase tracking-widest">Rescheduled</p>
+          <h1 class="font-bold text-3xl px-6 py-5 bg-blue-600 h-full rounded-r-md">3</h1>
+        </div>
+        <div class="total-appointments text-gray-100 flex bg-blue-400  rounded-md justify-between items-center">
+          <p class="font-semibold p-3 text-xs uppercase tracking-widest">Cancelled</p>
+          <h1 class="font-bold text-3xl px-6 py-5 bg-blue-600 h-full rounded-r-md">1</h1>
+        </div>
+      </div>
+
+      <!-- GRAPH -->
+      <div class="shadow-lg rounded-lg overflow-hidden mt-10 h-auto w-auto bg-white">
+        <div class="p-10 text-sm uppercase font-bold text-blue-600">Progress Graph</div>
+        <canvas class="p-10" id="chartLine"></canvas>
+      </div>
+
+      <!-- CONTENT SECTION -->
+      <section class="my-10 rounded-md shadow-lg p-10 bg-white">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex adipisci quibusdam aspernatur, dolorum quaerat necessitatibus iure ea rerum molestiae quae soluta nostrum eaque dolores commodi culpa sit quod error asperiores!
+      </section>
+
+      <section class="my-10 rounded-md shadow-lg p-10 bg-white">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex adipisci quibusdam aspernatur, dolorum quaerat necessitatibus iure ea rerum molestiae quae soluta nostrum eaque dolores commodi culpa sit quod error asperiores!
+      </section>
+
+      <section class="my-10 rounded-md shadow-lg p-10 bg-white">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex adipisci quibusdam aspernatur, dolorum quaerat necessitatibus iure ea rerum molestiae quae soluta nostrum eaque dolores commodi culpa sit quod error asperiores!
+      </section>
+
+      <section class="my-10 rounded-md shadow-lg p-10 bg-white">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex adipisci quibusdam aspernatur, dolorum quaerat necessitatibus iure ea rerum molestiae quae soluta nostrum eaque dolores commodi culpa sit quod error asperiores!
+      </section>
+
+    </div>
+
+      <!-- Chart line -->
+      <script>
+        const labels = ["Appointments", "Requests", "Rescheduled", "Cancelled"];
+        const data = {
+          labels: labels,
+          datasets: [
+            {
+              label: "My First dataset",
+              backgroundColor: "hsl(252, 82.9%, 67.8%)",
+              borderColor: "hsl(252, 82.9%, 67.8%)",
+              data: [0, 10, 5, 2, 20, 30, 45],
+            },
+          ],
+        };
+      
+        const configLineChart = {
+          type: "line",
+          data,
+          options: {},
+        };
+      
+        var chartLine = new Chart(
+          document.getElementById("chartLine"),
+          configLineChart
+        );
+      </script>
   
 </body>
 </html>
