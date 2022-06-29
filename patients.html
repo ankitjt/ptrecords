@@ -6,6 +6,7 @@
   <title>PT-Record</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://unpkg.com/@tailwindcss/forms@0.2.1/dist/forms.min.css" rel="stylesheet">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito+Sans:wght@400;600;700&display=swap');
     * {
@@ -67,6 +68,11 @@
     <div class="right-section h-screen w-full sm:w-full bg-gray-200 px-12 py-12 md:overflow-auto">
       
       <h1 class="text-base uppercase tracking-widest font-bold text-blue-600 subpixel-antialiased border-solid border-b-2 pb-2 border-neutral-400">Patients Lists</h1>
+
+      <div class="mt-10 relative">
+        <input type="search" name="" id="" placeholder="Search by name">
+        <img src="./assets/search.svg" alt="search" class="h-4 w-4 absolute top-3">
+      </div>
 
     </div>
 
