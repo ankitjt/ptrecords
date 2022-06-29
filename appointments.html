@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PT-Record</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://unpkg.com/@tailwindcss/forms@0.2.1/dist/forms.min.css" rel="stylesheet">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito+Sans:wght@400;600;700&display=swap');
     * {
@@ -19,53 +19,158 @@
   <div class="h-full w-full flex flex-col md:flex-row lg:flex-row">
 
     <!-- Left section -->
-    <div class="left-section px-6 py-12 w-full h-auto md:h-full lg:h-full md:w-3/12 lg:w-3/12">
+    <div class="left-section px-6 py-12 w-auto h-auto md:h-full lg:h-full md:w-2/6 lg:w-3/12">
       <h1 class="font-bold text-blue-600 text-base text-center subpixel-antialiased	uppercase">Records</h1>
       
       <!-- Navbar -->
-      <nav class="navbar flex flex-col justify-center text-[11px] tracking-wider font-semibold text-zinc-600 uppercase ">
-        <a href="index.html" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300">
-            <img src="./assets/homeIcon.svg" alt="homeIcon" class="w-5 h-5">
-            <span class="ml-4 ">Home</span>
-        </a>
-        <a href="newrecord.html" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300">
-          <img src="./assets/createnew.svg" alt="newRecord" class="w-5 h-5">
-          <span class="ml-4 ">New record</span>
-        </a>
-        <a href="appointments.html" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300">
-          <img src="./assets/appointments.svg" alt="appointments" class="w-5 h-5">
-          <span class="ml-4 ">Appointments</span>
-        </a>
-        <a href="costing.html" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300">
-          <img src="./assets/calculator.svg" alt="calculator" class="w-5 h-5">
-          <span class="ml-4 ">Costing</span>
-        </a>
-        <a href="reports.html" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300">
-          <img src="./assets/reports.svg" alt="reports" class="w-5 h-5">
-          <span class="ml-4 ">Reports</span>
-        </a>
-        <a href="#" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300">
-          <img src="./assets/darkMode.svg" alt="darkMode" class="w-5 h-5">
-          <span class="ml-4 ">darkMode</span>
-        </a>
-        <a href="settings.html" class="flex items-center mt-5 sm:mt-10 hover:text-red-600 ease-in-out duration-300">
-          <img src="./assets/settings.svg" alt="settings" class="w-5 h-5">
-          <span class="ml-4 ">Settings</span>
-        </a>
-        <a href="#" class="flex items-center mt-5 sm:mt-10">
-          <img src="./assets/logout.svg" alt="logout" class="w-5 h-5">
-          <span class="ml-4">logout</span>
-        </a>
-      </nav>
+     <div class="grid grid-cols-3 mt-5 sm:grid-cols-3 md:grid-cols-1 text-left tracking-wider font-semibold text-zinc-600 uppercase text-xs">
+        <a href="index.html" class="flex items-center justify-center sm:justify-start mx-4 my-4 sm:my-2 sm:mt-5 hover:text-red-600 ease-in-out duration-300 text-center">
+          <img src="./assets/homeIcon.svg" alt="homeIcon" class="w-5 h-5">
+          <span class="ml-1 sm:ml-4 ">Home</span>
+      </a>
+      <a href="newrecord.html" class="flex items-center mx-4 justify-center my-4 sm:justify-start sm:my-2 sm:mt-5 hover:text-red-600 ease-in-out duration-300">
+        <img src="./assets/createnew.svg" alt="newRecord" class="w-5 h-5">
+        <span class="ml-2 sm:ml-4 ">New record</span>
+      </a>
+      <a href="appointments.html" class="flex items-center mx-4  justify-center sm:justify-start my-4 sm:my-2 sm:mt-5 hover:text-red-600 ease-in-out duration-300">
+        <img src="./assets/appointments.svg" alt="appointments" class="w-5 h-5">
+        <span class="ml-2 sm:ml-4 ">Appointments</span>
+      </a>
+      <a href="costing.html" class="flex items-center mx-4 my-4 sm:my-2  sm:justify-start justify-center sm:mt-5 hover:text-red-600 ease-in-out duration-300">
+        <img src="./assets/calculator.svg" alt="calculator" class="w-5 h-5">
+        <span class="ml-2 sm:ml-4 ">Costing</span>
+      </a>
+      <a href="reports.html" class="flex items-center mx-4 my-4 sm:my-2  sm:justify-start justify-center sm:mt-5 hover:text-red-600 ease-in-out duration-300">
+        <img src="./assets/reports.svg" alt="reports" class="w-5 h-5">
+        <span class="ml-2 sm:ml-4 ">Reports</span>
+      </a>
+      <a href="#" class="flex items-center mx-4 my-4 sm:my-2 sm:mt-5  sm:justify-start justify-center hover:text-red-600 ease-in-out duration-300">
+        <img src="./assets/darkMode.svg" alt="darkMode" class="w-5 h-5">
+        <span class="ml-2 sm:ml-4 ">darkMode</span>
+      </a>
+      <a href="settings.html" class="flex items-center mx-4 my-4 sm:my-2  sm:justify-start justify-center sm:mt-5 hover:text-red-600 ease-in-out duration-300">
+        <img src="./assets/settings.svg" alt="settings" class="w-5 h-5">
+        <span class="ml-2 sm:ml-4 ">Settings</span>
+      </a>
+      <a href="#" class="flex items-center mx-4 my-4 sm:my-2 sm:mt-5 sm:justify-start justify-center ">
+        <img src="./assets/logout.svg" alt="logout" class="w-5 h-5">
+        <span class="ml-2 sm:ml-4">logout</span>
+      </a>
+      </div>
     </div>
 
     <!-- Right Section -->
-    <div class="right-section h-screen w-full sm:w-full bg-gray-100 px-12 py-12 md:overflow-auto">
+    <div class="right-section sm:h-auto md:h-screen w-full sm:w-full bg-gray-200 px-12 py-12 md:overflow-auto">
       
       <h1 class="text-base uppercase tracking-widest font-bold text-blue-600 subpixel-antialiased border-solid border-b-2 pb-2">Appointments</h1>
-
+    
+      <!-- Create new Appointment -->
+      <div class="mt-8 bg-white w-full h-auto p-8 rounded-md">
+        <h1 class="text-xs uppercase tracking-widest font-bold text-blue-600 subpixel-antialiased pb-2 mb-3"> Create Appointments</h1>
+        <form action="#">
+          <p class="font-bold text-red-600 mb-4 uppercase text-xs tracking-wider">** All fields are required **</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div class="userCategory col-span-1">
+                    <label for="userCategory">
+                        <p class="text-xs text-blue-600 font-bold uppercase tracking-widest">Select Category</p>
+                        <select class="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 my-3 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+                            <option selected>Select</option>
+                            <option value="individual">Individual</option>
+                            <option value="supervision">Supervision</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="userSelect col-span-1">
+                  <label for="userSelect">
+                      <p class="text-xs text-blue-600 font-bold uppercase tracking-widest">Select PT</p>
+                      <select class="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 my-3 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+                          <option selected>Select</option>
+                          <option value="individual">John Doe</option>
+                          <option value="supervision">Jane Smith</option>
+                      </select>
+                  </label>
+              </div>
+                
+                <div class="startDate">
+                    <label for="startDate">
+                        <p class="text-xs text-blue-600 font-bold uppercase tracking-widest">startDate</p>
+                        <input type="datetime-local" name="startDate" id="startDate" class="my-3 w-full border-gray-400 rounded-md">
+                    </label>
+                </div>
+            </div>
+            <button class="font-bold px-4 mt-6 py-2 bg-blue-600 text-white rounded-md uppercase text-sm tracking-wider">Create</button>
+            
+        </form>
+      </div>
  
-   
+    <!-- Existing Appointments -->
+    <div class="mt-8 bg-white w-full h-auto p-8 rounded-md">
+      <h1 class="text-xs uppercase tracking-widest font-bold text-blue-600 subpixel-antialiased"> Existing Appointments</h1>
+      <table class="mt-8 w-full text-xs uppercase font-semibold text-center">
+        <thead>
+          <tr class="bg-blue-600 text-white border border-gray-400">
+            <th class="p-6 text-xs tracking-wider uppercase">Name</th>
+            <th class=" text-xs tracking-wider uppercase">Category</th>
+            <th class=" text-xs tracking-wider uppercase">Time</th>
+            <th class=" text-xs tracking-wider uppercase">Status</th>
+            <th class=" text-xs tracking-wider uppercase"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-blue-100">
+            <td class="p-2 text-center">John Doe</td>
+            <td class="p-2 text-center">Individual</td>
+            <td class="p-2 text-center">Monday, 27/06/2022 <br /> 10:00 AM</td>
+            <td class="p-2 text-center">
+              <select class="form-select appearance-none block w-40 px-3 py-1.5 text-xs tracking-wider font-bold text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 my-3 rounded transition ease-in-out m-auto focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none text-left uppercase" aria-label="Default select example">
+                <option selected>Confirmed</option>
+                <option value="individual">Change</option>
+                <option value="supervision">Cancelled</option>
+            </select>
+            </td>
+            <td class="p-2 text-center">
+              
+            </td>
+          </tr>
+          <tr class="bg-gray-100 border border-gray-400">
+            <td class="p-2 text-center">Jane Smith</td>
+            <td class="p-2 text-center">Individual</td>
+            <td class="p-2 text-center">Tuesday, 28/06/2022 <br /> 10:00 AM</td>
+            <td class="p-2 text-center">
+              <select class="form-select appearance-none block w-40 px-3 py-1.5 text-xs tracking-wider font-bold text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 my-3 rounded transition ease-in-out m-auto focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none text-left uppercase" aria-label="Default select example">
+                <option selected>Confirmed</option>
+                <option value="individual">Change</option>
+                <option value="supervision">Cancelled</option>
+            </select>
+            </td>
+          </tr>
+          <tr class="bg-blue-300 border border-gray-400">
+            <td class="p-2 text-center">John Cruz</td>
+            <td class="p-2 text-center">Individual</td>
+            <td class="p-2 text-center">Thursday, 30/06/2022 <br /> 10:00 AM</td>
+            <td class="p-2 text-center">
+              <select class="form-select appearance-none block w-40 px-3 py-1.5 text-xs tracking-wider font-bold text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 my-3 rounded transition ease-in-out m-auto focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none text-left uppercase" aria-label="Default select example">
+                <option selected>Confirmed</option>
+                <option value="individual">Change</option>
+                <option value="supervision">Cancelled</option>
+            </select>
+            </td>
+          </tr>
+          <tr class="bg-gray-100 border border-gray-400">
+            <td class="p-2 text-center border-r-3 border-sky-500">Chris Evans</td>
+            <td class="p-2 text-center">Supervision</td>
+            <td class="p-2 text-center">Saturday <br class="mb-3"/> 02/07/2022  10:00 AM</td>
+            <td class="p-2 text-center">
+              <select class="form-select appearance-none block w-40 px-3 py-1.5 text-xs tracking-wider font-bold text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 my-3 rounded transition ease-in-out m-auto focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none text-left uppercase" aria-label="Default select example">
+                <option selected>Confirmed</option>
+                <option value="individual">Change</option>
+                <option value="supervision">Cancelled</option>
+            </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     </div>
 
