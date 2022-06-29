@@ -1,7 +1,7 @@
-# atailwindproject
+# PT Records
 
 
-## A project made using Tailwind Framework.
+## A patient records ledger.
 
 ## [Project Link](https://ankitjt.github.io/atailwindproject/)
 
