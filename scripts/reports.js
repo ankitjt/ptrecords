@@ -18,14 +18,14 @@ const db = firebase.firestore();
         }
         querySnapshot.forEach((doc) => {
             let rowData = `
-                <tr class="bg-blue-200 tableRows">
-                    <td class="px-0 py-4 text-center"><span>${doc.data().ptFirstName + " " + doc.data().ptLastName}  </span></td>
-                    <td class="px-0 py-4 text-center"><span>${doc.data().ptType} </span></td>
-                    <td class="px-0 py-4 text-center"><span>${doc.data().ptEmail} </span></td>
-                    <td class="px-0 py-4 text-center"><span>${doc.data().ptMobileNumber} </span></td>
-                    <td class="px-0 py-4 text-center"><span>${doc.data().ptAddress} </span></td>
-                    <td class="px-0 py-4 text-center"><span>${doc.data().ptStartTime} </span></td>
-                    <td class="px-0 py-4 text-center"><span>${"&#x20b9;" + " " + doc.data().ptFee} </span></td>
+                <tr class="odd:bg-blue-200 tableRows">
+                    <td class="px-0 py-4 text-center select-all"><span>${doc.data().ptFirstName + " " + doc.data().ptLastName}  </span></td>
+                    <td class="px-0 py-4 text-center select-all "><span>${doc.data().ptType} </span></td>
+                    <td class="px-0 py-4 text-center  select-all lowercase"><span>${doc.data().ptEmail} </span></td>
+                    <td class="px-0 py-4 text-center  select-all tracking-widest"><span>${doc.data().ptMobileNumber} </span></td>
+                    <td class="px-0 py-4 text-center  select-all"><span>${doc.data().ptAddress} </span></td>
+                    <td class="px-0 py-4 text-center  select-all "><span>${doc.data().ptStartTime} </span></td>
+                    <td class="px-0 py-4 text-center  select-all "><span>${"&#x20b9;" + " " + doc.data().ptFee} </span></td>
                 </tr>
                 `
                 
