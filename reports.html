@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PT-Record</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/@tailwindcss/forms@0.2.1/dist/forms.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito+Sans:wght@400;600;700&display=swap');
@@ -68,10 +69,82 @@
       
       <h1 class="text-base uppercase tracking-widest font-bold text-blue-600 subpixel-antialiased border-solid border-b-2 pb-2 border-neutral-400">Reports</h1>
 
+      <!-- Table Filters -->
+      <div class="mt-8 relative h-auto grid">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-10 px-4">
+          <div class="userType">
+            <select class="form-select appearance-none block w-full px-3 py-1.5 text-xs tracking-wider font-bold text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded-md transition ease-in-out m-auto focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none text-left uppercase" aria-label="Default select example">
+              <option selected value="patientType">Patient Type</option>
+              <option value="individual">Individual</option>
+              <option value="supervision">Supervision</option>
+          </select>
+          </div>
+          <div class="month">
+              <input type="month" name="" id="" class="rounded-md border-none border-b-1 border-gray-400 px-10 py-1.5 w-full block text-xs outline-none" placeholder="By Month">
+          </div>
+          <div class="userStatus">
+            <select class="form-select appearance-none block w-full px-3 py-1.5 text-xs tracking-wider font-bold text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded-md transition ease-in-out m-auto focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none text-left uppercase" aria-label="Default select example">
+              <option selected value="Status">Status</option>
+              <option value="confirmed">Confirmed</option>
+              <option value="cancelled">Cancelled</option>
+              <option value="changed">Changed</option>
+          </select>
+          </div>
+          <div class="searchByName relative">
+            <input type="search" name="" id="" placeholder="Search by name" class="uppercase rounded-md border-none border-b-1 border-gray-400 px-8 py-1.5 w-full block text-xs outline-none tracking-widest">
+            <img src="./assets/search.svg" alt="search" class="h-3 w-3 absolute top-2 left-2">
+          </div>
+          
+        </div>
+
+        <table class="mt-8 w-full text-xs allRecordTable uppercase font-semibold text-center">
+          <thead>
+            <tr class="bg-blue-600 text-white ">
+              <th class="p-6 text-xs tracking-wider uppercase">Name</th>
+              <th class=" text-xs tracking-wider uppercase">Category</th>
+              <th class=" text-xs tracking-wider uppercase">Email</th>
+              <th class=" text-xs tracking-wider uppercase">Mobile Number</th>
+              <th class=" text-xs tracking-wider uppercase">Address</th>
+              <th class=" text-xs tracking-wider uppercase">Start Time</th>
+              <th class=" text-xs tracking-wider uppercase">Fee</th>
+              
+            </tr>
+          </thead>
+          <tbody class="tableBodyAllRecords">
+            <!-- <tr class="bg-blue-200">
+              <td class="p-2 text-center"><span>John Doe </span></td>
+              <td class="p-2 text-center"><span>Individual </span></td>
+              <td class="p-2 text-center"><span>Monday, 27/06/2022 <br /> 10:00 AM </span></td>
+              <td class="p-2 text-center"><span>Confirmed </span></td>
+            </tr>
+            <tr class="bg-gray-100 ">
+              <td class="p-2 text-center"><span>John Doe </span></td>
+              <td class="p-2 text-center"><span>Individual </span></td>
+              <td class="p-2 text-center"><span>Monday, 27/06/2022 <br /> 10:00 AM </span></td>
+              <td class="p-2 text-center"><span>Changed-1 </span></td>
+            </tr>
+            <tr class="bg-blue-200 ">
+              <td class="p-2 text-center"><span>John Doe </span></td>
+              <td class="p-2 text-center"><span>Individual </span></td>
+              <td class="p-2 text-center"><span>Monday, 27/06/2022 <br /> 10:00 AM </span></td>
+              <td class="p-2 text-center"><span>Confirmed </span></td>
+            </tr>
+            <tr class="bg-gray-100 ">
+              <td class="p-2 text-center"><span>John Doe </span></td>
+              <td class="p-2 text-center"><span>Individual </span></td>
+              <td class="p-2 text-center"><span>Monday, 27/06/2022 <br /> 10:00 AM </span></td>
+              <td class="p-2 text-center"><span>Cancelled </span></td>
+            </tr> -->
+          </tbody>
+        </table>
+        
+      </div>
  
    
 
     </div>
-
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="./scripts/reports.js"></script>
 </body>
 </html>
