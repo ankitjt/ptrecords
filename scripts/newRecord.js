@@ -11,6 +11,16 @@ let nrpType = document.querySelector(".nrpType"),
     successNotification = document.querySelector(".successNotification")
     failNotification = document.querySelector(".failNotification")
 
+firebase.initializeApp({
+    apiKey: "AIzaSyBzaI2_yeVQDSw6XI3CjLTS0DPZNGgaI2E",
+    authDomain: "ptrecords-5b6a8.firebaseapp.com",
+    projectId: "ptrecords-5b6a8",
+    storageBucket: "ptrecords-5b6a8.appspot.com",
+    messagingSenderId: "756775079284",
+    appId: "1:756775079284:web:91f32dcab5720b6e373021"
+    });
+const db = firebase.firestore();
+
 nrpRegister.onclick = (e) => {
     e.preventDefault();
     if(nrpType.value === "" || nrpFirstName.value === "" || nrpLastName.value=== "" || nrpEmail.value === "" || nrpAddress.value=== "" || nrpMobileNumber.value === "" || nrpStartTime.value === "" || nrpFee.value === "") {
@@ -20,6 +30,16 @@ nrpRegister.onclick = (e) => {
         successNotification.classList.add("hidden")
     }
     else {
+        db.collection("newRecords").add({
+            ptType: nrpType.value,
+            ptFirstName: nrpFirstName.value,
+            ptLastName: nrpLastName.value,
+            ptEmail: nrpEmail.value,
+            ptMobileNumber: nrpMobileNumber.value,
+            ptAddress: nrpAddress.value,
+            ptStartTime: nrpStartTime.value,
+            ptFee: nrpFee.value
+        })
         console.table([nrpType.value, nrpFirstName.value, nrpLastName.value, nrpEmail.value, nrpMobileNumber.value, nrpAddress.value, nrpStartTime.value, nrpFee.value])
         failNotification.classList.remove("block")
         failNotification.classList.add("hidden")
