@@ -16,7 +16,7 @@
     }
   </style>
 </head>
-<body class="border-box">
+<body class="border-box body">
   <div class="h-full w-full flex flex-col md:flex-row lg:flex-row">
 
     <!-- Left section -->
@@ -71,7 +71,7 @@
 
       <!-- Table Filters -->
       <div class="mt-8 relative h-auto grid">
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-10 px-4">
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-10 px-4">
           <div class="userType">
             <select class="form-select appearance-none block w-full px-3 py-1.5 text-xs tracking-wider font-bold text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded-md transition ease-in-out m-auto focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none text-left uppercase" aria-label="Default select example">
               <option selected value="patientType">Patient Type</option>
@@ -82,22 +82,22 @@
           <div class="month">
               <input type="month" name="" id="" class="rounded-md border-none border-b-1 border-gray-400 px-10 py-1.5 w-full block text-xs outline-none" placeholder="By Month">
           </div>
-          <div class="userStatus">
+          <!-- <div class="userStatus">
             <select class="form-select appearance-none block w-full px-3 py-1.5 text-xs tracking-wider font-bold text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded-md transition ease-in-out m-auto focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none text-left uppercase" aria-label="Default select example">
               <option selected value="Status">Status</option>
               <option value="confirmed">Confirmed</option>
               <option value="cancelled">Cancelled</option>
               <option value="changed">Changed</option>
           </select>
-          </div>
+          </div> -->
           <div class="searchByName relative">
-            <input type="search" name="" id="" placeholder="Search by name" class="uppercase rounded-md border-none border-b-1 border-gray-400 px-8 py-1.5 w-full block text-xs outline-none tracking-widest">
+            <input type="search" name="" id="" placeholder="Use '/' to search " class="searchInput uppercase rounded-md border-none border-b-1 border-gray-400 px-8 py-1.5 w-full block text-xs outline-none tracking-widest">
             <img src="./assets/search.svg" alt="search" class="h-3 w-3 absolute top-2 left-2">
           </div>
           
         </div>
 
-        <table class="mt-8 w-full text-xs allRecordTable  font-semibold text-center">
+        <!-- <table class="mt-8 w-full text-xs allRecordTable  font-semibold text-center">
           <thead>
             <tr class="bg-blue-600 text-white uppercase">
               <th class="p-6 text-xs tracking-wider uppercase">Name</th>
@@ -111,32 +111,13 @@
             </tr>
           </thead>
           <tbody class="tableBodyAllRecords even:bg-gray-100 capitalize">
-            <!-- <tr class="bg-blue-200">
-              <td class="p-2 text-center"><span>John Doe </span></td>
-              <td class="p-2 text-center"><span>Individual </span></td>
-              <td class="p-2 text-center"><span>Monday, 27/06/2022 <br /> 10:00 AM </span></td>
-              <td class="p-2 text-center"><span>Confirmed </span></td>
-            </tr>
-            <tr class="bg-gray-100 ">
-              <td class="p-2 text-center"><span>John Doe </span></td>
-              <td class="p-2 text-center"><span>Individual </span></td>
-              <td class="p-2 text-center"><span>Monday, 27/06/2022 <br /> 10:00 AM </span></td>
-              <td class="p-2 text-center"><span>Changed-1 </span></td>
-            </tr>
-            <tr class="bg-blue-200 ">
-              <td class="p-2 text-center"><span>John Doe </span></td>
-              <td class="p-2 text-center"><span>Individual </span></td>
-              <td class="p-2 text-center"><span>Monday, 27/06/2022 <br /> 10:00 AM </span></td>
-              <td class="p-2 text-center"><span>Confirmed </span></td>
-            </tr>
-            <tr class="bg-gray-100 ">
-              <td class="p-2 text-center"><span>John Doe </span></td>
-              <td class="p-2 text-center"><span>Individual </span></td>
-              <td class="p-2 text-center"><span>Monday, 27/06/2022 <br /> 10:00 AM </span></td>
-              <td class="p-2 text-center"><span>Cancelled </span></td>
-            </tr> -->
+            
           </tbody>
-        </table>
+        </table> -->
+        
+        <div class="reportSection container mt-5 bg-white p-4 rounded-md h-auto flex">
+          <div class="reportCardLeft"></div>
+        </div>
         
       </div>
  
