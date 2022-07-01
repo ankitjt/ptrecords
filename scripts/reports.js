@@ -9,48 +9,56 @@ firebase.initializeApp({
     });
 const db = firebase.firestore();
 
+let searchInput = document.querySelector(".searchInput")
+let body = document.querySelector(".body")
 
-(() => {
-    db.collection("newRecords").onSnapshot((querySnapshot) => {
-        let delRows = document.querySelectorAll(".tableRows")
-        for(const delPill of delRows) {
-            delPill.remove()
-        }
-        querySnapshot.forEach((doc) => {
-            let rowData = `
-                <tr class="odd:bg-blue-200 tableRows">
-                    <td class="px-0 py-4 text-center select-all"><span>${doc.data().ptFirstName + " " + doc.data().ptLastName}  </span></td>
-                    <td class="px-0 py-4 text-center select-all "><span>${doc.data().ptType} </span></td>
-                    <td class="px-0 py-4 text-center  select-all lowercase"><span>${doc.data().ptEmail} </span></td>
-                    <td class="px-0 py-4 text-center  select-all tracking-widest"><span>${doc.data().ptMobileNumber} </span></td>
-                    <td class="px-0 py-4 text-center  select-all"><span>${doc.data().ptAddress} </span></td>
-                    <td class="px-0 py-4 text-center  select-all "><span>${doc.data().ptStartTime} </span></td>
-                    <td class="px-0 py-4 text-center  select-all "><span>${"&#x20b9;" + " " + doc.data().ptFee} </span></td>
-                </tr>
-                `
+body.onkeypress = (e) => {
+    if(e.which === 47) {
+        e.preventDefault();
+        searchInput.focus()
+    }
+} 
+
+// (() => {
+//     db.collection("newRecords").onSnapshot((querySnapshot) => {
+//         let delRows = document.querySelectorAll(".tableRows")
+//         for(const delPill of delRows) {
+//             delPill.remove()
+//         }
+//         querySnapshot.forEach((doc) => {
+//             let rowData = `
+//                 <tr class="odd:bg-blue-200 tableRows">
+//                     <td class="px-0 py-4 text-center select-all"><span>${doc.data().ptFirstName + " " + doc.data().ptLastName}  </span></td>
+//                     <td class="px-0 py-4 text-center select-all "><span>${doc.data().ptType} </span></td>
+//                     <td class="px-0 py-4 text-center  select-all lowercase"><span>${doc.data().ptEmail} </span></td>
+//                     <td class="px-0 py-4 text-center  select-all tracking-widest"><span>${doc.data().ptMobileNumber} </span></td>
+//                     <td class="px-0 py-4 text-center  select-all"><span>${doc.data().ptAddress} </span></td>
+//                     <td class="px-0 py-4 text-center  select-all "><span>${doc.data().ptStartTime} </span></td>
+//                     <td class="px-0 py-4 text-center  select-all "><span>${"&#x20b9;" + " " + doc.data().ptFee} </span></td>
+//                 </tr>
+//                 `
                 
-                tableBodyAllRecords.innerHTML += rowData   
-                // pillsCountUpdate()    
-                // deletePill() 
-        })
-    })
-})()
+//                 tableBodyAllRecords.innerHTML += rowData   
+                
+//         })
+//     })
+// })()
 
 //To delete a record.
-const deletePill = () => {
-    let pillToDel = document.querySelectorAll(".deletePill")
-    for (let deletePill of pillToDel) {
-        deletePill.onclick = () => {
-            let pillDataID = deletePill.parentElement.getAttribute("data-id")
-            db.collection("trackers").onSnapshot((querySnapshot) => {
-                querySnapshot.forEach((doc) => {
-                    if(doc.id === pillDataID) {
-                        db.collection("trackers").doc(pillDataID).delete()
-                        message.style.left = '45%'
-                        message.innerText = "Record Deleted"
-                    } 
-                })
-            })
-        }
-    }
-}
+// const deletePill = () => {
+//     let pillToDel = document.querySelectorAll(".deletePill")
+//     for (let deletePill of pillToDel) {
+//         deletePill.onclick = () => {
+//             let pillDataID = deletePill.parentElement.getAttribute("data-id")
+//             db.collection("trackers").onSnapshot((querySnapshot) => {
+//                 querySnapshot.forEach((doc) => {
+//                     if(doc.id === pillDataID) {
+//                         db.collection("trackers").doc(pillDataID).delete()
+//                         message.style.left = '45%'
+//                         message.innerText = "Record Deleted"
+//                     } 
+//                 })
+//             })
+//         }
+//     }
+// }
